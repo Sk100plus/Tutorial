@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special way</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: rgb(230, 29, 129);
+        display: flex;
+       justify-content: center;
+       align-items: center;    }
+
+.container{
+    margin: 0 ;
+    width: 40vh;
+    height:200px;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    top: 30%;   
+box-shadow: 2px 5px 50px 0px rgb(225, 58, 225);
+margin-left: 50px;
+margin-right: 50px;
+/* display: grid;
+  place-items: center; */
+}
+.btn{
+    font-size: 20px;
+    font-family:cursive;
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(225, 99, 185);
+    cursor: pointer;
+  color: white;
+
+}
+.content
+{
+    width: 100%;
+position: absolute;
+top: 50px;
+text-align: center;
+    font-size: 4vh;
+    margin: 0px;
+}
+.button{
+    width: 100%;
+    position: absolute;
+    left: 45px;
+    top: 60%;
+}
+.btn{
+    margin: 5px;
+    box-shadow: 2px 3px 10px 0px rgb(182, 137, 182);
+}
+.btn:hover{
+    background: rgb(216, 126, 188);
+}
+.btn2{
+    position: absolute;
+}
+@media only screen and (max-width:375px){
+.button{
+    position:absolute;
+        left: 10px;
+}
+}
+/* .hrt{
+    
+    object-fit: cover;
+} */
+
+</style>
+<body>
+    <div class="container">
+<div class="content" id="data" > Do you love me ?</div>
+<!-- <div id="heart" class="hrt"></div> -->
+<div class="button">
+<button class="btn1 btn" id="yes" onclick="accept()">Yes</button>
+<button class="btn2 btn" id="no" onclick="reject()">No</button>
+</div>
+    </div>
+    <script>
+let data=document.getElementById("data");
+let bt=document.getElementById("button");
+// let heart=document.getElementById("heart");
+// let img=document.createElement('img');
+// img.src="OIP.jpg";
+// heart.style.width="10px";
+// heart.style.  height="10px";
+function accept(){
+// heart.appendChild(img);
+
+data.innerHTML="I love you to !";
+}
+let button=document.getElementById("no");
+let a=1;
+let b=1;
+function reject(){
+  if(b%2==0){
+    button.style.right=`${b*50}px`; 
+    button.style.top=`${b*50}px`; 
+  }
+else
+{
+    button.style.left=`${b*50}px`; 
+    button.style.top=`${20-b*2}px`; 
+}
+b++;
+}
+    </script>
+</body>
+</html>
